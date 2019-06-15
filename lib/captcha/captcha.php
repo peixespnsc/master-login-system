@@ -105,7 +105,7 @@ if( isset($_GET['_CAPTCHA']) ) {
     unset($_SESSION['_CAPTCHA']);
 
     // Use milliseconds instead of seconds
-    srand(microtime() * 100);
+    srand((float) microtime() * 100);
 
     // Pick random background, get info, and start captcha
     $background = $captcha_config['png_backgrounds'][rand(0, count($captcha_config['png_backgrounds']) -1)];
